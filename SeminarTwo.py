@@ -32,27 +32,43 @@
 
 # task 11
 
-def fibonacci_number(n):
-    if n <= 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        prev = 0
-        curr = 1
-        count = 2
-        while curr < n:
-            temp = curr
-            curr = curr + prev
-            prev = temp
-            count += 1
-        if curr == n:
-            return count
-        else:
-            return -1
+# def fibonacci_number(n):
+#     if n <= 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         prev = 0
+#         curr = 1
+#         count = 2
+#         while curr < n:
+#             temp = curr
+#             curr = curr + prev
+#             prev = temp
+#             count += 1
+#         if curr == n:
+#             return count
+#         else:
+#             return -1
 
 
-A = int(input("Введите число A: "))
-result = fibonacci_number(A)
+# A = int(input("Введите число A: "))
+# result = fibonacci_number(A)
+# print()
+# print(result)
+
+# task 15
+
+N = int(input("Введите количество арбузов: "))
+weights = []
+
+for i in range(N):
+    weight = int(input(f"Введите массу {i+1} арбуза: "))
+    weights.append(weight)
+
+min_weight = min(weights)
+max_weight = max(weights)
+
 print()
-print(result)
+print(f"Самый легкий арбуз: {min_weight}")
+print(f"Самый тяжелый арбуз: {max_weight}")
