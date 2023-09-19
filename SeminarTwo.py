@@ -59,16 +59,46 @@
 
 # task 15
 
-N = int(input("Введите количество арбузов: "))
-weights = []
+# N = int(input("Введите количество арбузов: "))
+# weights = []
 
-for i in range(N):
-    weight = int(input(f"Введите массу {i+1} арбуза: "))
-    weights.append(weight)
+# for i in range(N):
+#     weight = int(input(f"Введите массу {i+1} арбуза: "))
+#     weights.append(weight)
 
-min_weight = min(weights)
-max_weight = max(weights)
+# min_weight = min(weights)
+# max_weight = max(weights)
 
+# print()
+# print(f"Самый легкий арбуз: {min_weight}")
+# print(f"Самый тяжелый арбуз: {max_weight}")
+
+def longest_thaw_days(N, temperatures):
+    longest_thaw = 0
+    current_thaw = 0
+
+    for temperature in temperatures:
+        if temperature > 0:
+            current_thaw += 1
+        else:
+            if current_thaw > longest_thaw:
+                longest_thaw = current_thaw
+            current_thaw = 0
+
+    if current_thaw > longest_thaw:
+        longest_thaw = current_thaw
+
+    return longest_thaw
+
+
+N = int(input("Введите количество дней: "))
+temperatures = []
+
+print("Введите температуру за каждый день:")
+
+for i in range(1, N+1):
+    temperature = int(input(f"Введите температуру за {i} день: "))
+    temperatures.append(temperature)
 print()
-print(f"Самый легкий арбуз: {min_weight}")
-print(f"Самый тяжелый арбуз: {max_weight}")
+result = longest_thaw_days(N, temperatures)
+print("Длительность самой длинной оттепели:", result)
