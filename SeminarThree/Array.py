@@ -17,7 +17,7 @@ def count_elements_greater_than_previous(arr):
 
 
 # Пример ввода
-input_list = [0, -1, 5, 2, 3]
+input_list = [0, 1, 0, 6, 3, 2, 8]
 
 result = count_elements_greater_than_previous(input_list)
 print(result)
