@@ -54,3 +54,9 @@
 # print(a0)
 # end_time = datetime.now()
 # print(f'Время работы алгоритма линейной программы {end_time - start_time}')
+
+# Оценки
+
+n = int(input("Введите количество оценок: "))
+marks = [int(i) for i in input("Введите оценки: ").split()][:n]
+print(*[min(marks) if max(marks) == j else j for j in marks])
