@@ -63,17 +63,29 @@
 
 # Простое число
 
-def is_prime(number):
-    if number < 2:
-        return False
-    for i in range(2, int(number ** 0.5) + 1):
-        if number % i == 0:
-            return False
-    return True
+# def is_prime(number):
+#     if number < 2:
+#         return False
+#     for i in range(2, int(number ** 0.5) + 1):
+#         if number % i == 0:
+#             return False
+#     return True
 
 
-number = int(input("Введите число: "))
-if is_prime(number):
-    print("Да, число является простым.")
-else:
-    print("Нет, число не является простым.")
+# number = int(input("Введите число: "))
+# if is_prime(number):
+#     print("Да, число является простым.")
+# else:
+#     print("Нет, число не является простым.")
+
+# Натуральное число
+
+# def reverse_sequence():
+#     n = int(input())
+#     if n == 0:
+#         return
+#     reverse_sequence()
+#     print(n, end=" ")
+
+
+# reverse_sequence()
