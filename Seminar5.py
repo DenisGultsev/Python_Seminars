@@ -57,6 +57,23 @@
 
 # Оценки
 
-n = int(input("Введите количество оценок: "))
-marks = [int(i) for i in input("Введите оценки: ").split()][:n]
-print(*[min(marks) if max(marks) == j else j for j in marks])
+# n = int(input("Введите количество оценок: "))
+# marks = [int(i) for i in input("Введите оценки: ").split()][:n]
+# print(*[min(marks) if max(marks) == j else j for j in marks])
+
+# Простое число
+
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+
+number = int(input("Введите число: "))
+if is_prime(number):
+    print("Да, число является простым.")
+else:
+    print("Нет, число не является простым.")
